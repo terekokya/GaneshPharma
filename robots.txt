@@ -1,0 +1,3 @@
+User-agent: *
+Allow: /
+Sitemap: https://ganeshpharma.github.io/sitemap.xml
