@@ -1,0 +1,223 @@
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body, html {
+  font-family: 'Poppins', sans-serif;
+  background: linear-gradient(to right, #0f2027, #203a43, #2c5364); /* Deep cool tones */
+  color: #fff;
+  overflow-x: hidden;
+}
+.glass-nav {
+  position: fixed;
+  width: 100%;
+  backdrop-filter: blur(10px);
+  background: rgba(255, 255, 255, 0.1);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+  padding: 15px 30px;
+  z-index: 1000;
+}
+.nav-container {
+  max-width: 1100px;
+  margin: auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.nav-container ul {
+  display: flex;
+  gap: 20px;
+  list-style: none;
+}
+.nav-container ul li a {
+  color: #fff;
+  text-decoration: none;
+  padding: 8px 14px;
+  border-radius: 20px;
+  transition: background 0.3s;
+}
+.nav-container ul li a:hover {
+  background: rgba(255, 255, 255, 0.2);
+}
+.logo-img {
+  height: 150px;
+  border-radius: 50%;
+  background: white;
+  padding: 4px;
+  box-shadow: 0 0 10px rgba(212,175,55,0.4);
+}
+
+.hero-premium {
+  height: 100vh;
+  background: linear-gradient(to right, #0f2027, #203a43, #2c5364);
+  color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  overflow: hidden;
+}
+.hero-content {
+  z-index: 2;
+  text-align: center;
+  padding: 0 20px;
+}
+.animated-title {
+  font-size: 48px;
+  line-height: 1.3;
+  font-family: 'Playfair Display', serif;
+}
+.fade-in {
+  display: block;
+  opacity: 0;
+  animation: fadeIn 1.5s ease forwards;
+}
+.shimmer-text {
+  background: linear-gradient(90deg, #fff, #ffd700, #fff);
+  background-size: 200% auto;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  animation: shimmer 3s infinite;
+  display: inline-block;
+}
+.hero-subtext {
+  margin-top: 20px;
+  font-size: 20px;
+  font-weight: 300;
+  height: 30px;
+  white-space: nowrap;
+  overflow: hidden;
+  border-right: 3px solid #fff;
+  width: 100%;
+}
+.gold-divider {
+  width: 200px;
+  height: 3px;
+  background: linear-gradient(to right, transparent, #d4af37, transparent);
+  margin: 40px auto 0;
+  border-radius: 2px;
+}
+
+@keyframes fadeIn {
+  to { opacity: 1; }
+}
+@keyframes shimmer {
+  to { background-position: 200% center; }
+}
+
+#particles {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  z-index: 1;
+}
+footer {
+  background: #0f2027;
+  color: white;
+  text-align: center;
+  padding: 20px;
+}
+
+.section {
+  padding: 80px 20px;
+  max-width: 1100px;
+  margin: auto;
+  text-align: center;
+  position: relative;
+}
+.section-title {
+  font-size: 36px;
+  color: #ffd700;
+  font-family: 'Playfair Display', serif;
+  margin-bottom: 30px;
+  position: relative;
+}
+.section-title::after {
+  content: '';
+  display: block;
+  width: 80px;
+  height: 3px;
+  background: linear-gradient(to right, transparent, #ffd700, transparent);
+  margin: 10px auto 0;
+  border-radius: 2px;
+}
+.section-text {
+  font-size: 18px;
+  color: #eee;
+  max-width: 800px;
+  margin: auto;
+}
+
+.product-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 30px;
+  margin-top: 40px;
+}
+.product-card {
+  background: rgba(255, 255, 255, 0.08);
+  border: 1px solid rgba(255, 255, 255, 0.15);
+  backdrop-filter: blur(12px);
+  border-radius: 20px;
+  padding: 24px;
+  color: white;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  box-shadow: 0 4px 24px rgba(0, 0, 0, 0.15);
+}
+.product-card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 8px 30px rgba(0, 0, 0, 0.3);
+}
+.product-img {
+  width: 100%;
+  height: 160px;
+  object-fit: cover;
+  border-radius: 12px;
+  margin-bottom: 15px;
+}
+
+.contact-form {
+  background: rgba(255, 255, 255, 0.08);
+  border: 1px solid rgba(255, 255, 255, 0.15);
+  backdrop-filter: blur(10px);
+  padding: 40px;
+  border-radius: 20px;
+  color: white;
+  box-shadow: 0 4px 24px rgba(0, 0, 0, 0.2);
+}
+.contact-form input,
+.contact-form textarea {
+  width: 100%;
+  padding: 12px;
+  margin-bottom: 20px;
+  border: none;
+  border-radius: 10px;
+  font-size: 16px;
+}
+.contact-form button {
+  background: #ffd700;
+  color: #0f2027;
+  font-weight: bold;
+  border: none;
+  padding: 14px;
+  font-size: 16px;
+  width: 100%;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: background 0.3s;
+}
+.contact-form button:hover {
+  background: #e6c200;
+}
+.contact-info {
+  margin-top: 20px;
+  font-size: 14px;
+}
+.contact-info a {
+  color: #ffd700;
+  text-decoration: underline;
+}

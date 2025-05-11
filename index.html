@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Ganesh Pharma - Trusted Healthcare in Agra since 1998">
+  <title>Ganesh Pharma</title>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@500&family=Playfair+Display:wght@600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <nav class="glass-nav">
+    <div class="nav-container">
+      <a href="#"><img src="logo.png" alt="Ganesh Pharma Logo" class="logo-img" /></a>
+      <ul>
+        <li><a href="#about">About</a></li>
+        <li><a href="#products">Products</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <header class="hero-premium">
+    <canvas id="particles"></canvas>
+    <div class="hero-content">
+      <h1 class="animated-title"><span class="fade-in">Welcome to</span> <span class="shimmer-text">Ganesh Pharma</span></h1>
+      <p id="typing-text" class="hero-subtext"></p>
+      <div class="gold-divider"></div>
+    </div>
+  </header>
+
+  <section id="about" class="section">
+    <h2 class="section-title">About Us</h2>
+    <p class="section-text">Ganesh Pharma is a family-owned pharmacy located in Agra, serving the community since 1998. We provide a wide range of medicines and health products to support your well-being.</p>
+  </section>
+
+  <section id="products" class="section">
+    <h2 class="section-title">Our Products</h2>
+    <div class="product-grid">
+      <div class="product-card">
+        <img src="medicine1.jpg" alt="Prescription Medicines" class="product-img" />
+        <h3></h3>
+        <p></p>
+      </div>
+      <div class="product-card">
+        <img src="medicine2.jpg" alt="OTC Products" class="product-img" />
+        <h3></h3>
+        <p></p>
+      </div>
+      <div class="product-card">
+        <img src="medicine3.jpg" alt="Health Supplements" class="product-img" />
+        <h3></h3>
+        <p></p>
+      </div>
+    </div>
+  </section>
+
+  <section id="contact" class="section">
+    <h2 class="section-title">Contact Us</h2>
+    <form class="contact-form" id="contact-form" action="https://formspree.io/f/xgvkzboz" method="POST">
+      <input type="text" name="name" placeholder="Your Name" required />
+      <input type="email" name="email" placeholder="Your Email" required />
+      <textarea name="message" rows="5" placeholder="Your Message" required></textarea>
+      <button type="submit">Send Message</button>
+      <div class="contact-info">
+        <p><strong>Phone:</strong> 8899905600</p>
+        <p><strong>Hours:</strong> Every day except Monday from 1:00 PM – 8:00 PM</p>
+        <p><strong>Location:</strong> <a href="https://maps.app.goo.gl/Mz7gbQvAnPe1DvjZ8" target="_blank">Find us on Google Maps</a></p>
+      </div>
+    </form>
+  </section>
+
+  <footer>
+    <p>&copy; 2025 Ganesh Pharma. All rights reserved.</p>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
