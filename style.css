@@ -240,3 +240,14 @@ footer {
   from { transform: rotate(0deg); }
   to { transform: rotate(360deg); }
 }
+.cursor {
+  display: inline-block;
+  animation: blink 1s step-start infinite;
+  color: #fff;
+}
+
+@keyframes blink {
+  50% {
+    opacity: 0;
+  }
+}
