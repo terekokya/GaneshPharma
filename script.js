@@ -10,15 +10,11 @@ document.addEventListener("DOMContentLoaded", () => {
   const fullText = "Trusted Healthcare Since 1998";
   let index = 0;
 
-  typingText.style.borderRight = "2px solid #fff"; // show blinking bar
-
   function type() {
-    if (index < fullText.length) {
-      typingText.textContent += fullText.charAt(index);
-      index++;
+    typingText.innerHTML = fullText.substring(0, index) + '<span class="cursor">|</span>';
+    index++;
+    if (index <= fullText.length) {
       setTimeout(type, 75);
-    } else {
-      typingText.style.borderRight = "none"; // remove blinking after done
     }
   }
 
