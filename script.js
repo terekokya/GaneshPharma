@@ -4,17 +4,20 @@ window.addEventListener('load', function () {
 });
 document.addEventListener("DOMContentLoaded", () => {
   const typingText = document.getElementById("typing-text");
-  const fullText = "Trusted Healthcare Since 1998";
-  let index = 0;
+const fullText = "Trusted Healthcare Since 1998";
+let index = 0;
 
-  function type() {
-    if (index < fullText.length) {
-      typingText.textContent += fullText.charAt(index);
-      index++;
-      setTimeout(type, 75);
-    }
+function type() {
+  if (index < fullText.length) {
+    typingText.textContent += fullText.charAt(index);
+    index++;
+    setTimeout(type, 75);
+  } else {
+    typingText.style.borderRight = "none";  // remove the blinking line
   }
-  type();
+}
+typingText.style.borderRight = "2px solid #fff";  // show blinking line
+type();
 
   // Simple floating particles (stars)
   const canvas = document.getElementById("particles");
