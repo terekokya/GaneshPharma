@@ -1,3 +1,7 @@
+window.addEventListener('load', function () {
+  document.getElementById('preloader').style.display = 'none';
+  document.getElementById('main-content').style.display = 'block';
+});
 
 document.addEventListener("DOMContentLoaded", () => {
   const typingText = document.getElementById("typing-text");
