@@ -1,22 +1,29 @@
+// PRELOADER FUNCTION
 window.addEventListener('load', function () {
   document.getElementById('preloader').style.display = 'none';
   document.getElementById('main-content').style.display = 'block';
 });
-  const typingText = document.getElementById("typing-text");
-const fullText = "Trusted Healthcare Since 1998";
-let index = 0;
 
-function type() {
-  if (index < fullText.length) {
-    typingText.textContent += fullText.charAt(index);
-    index++;
-    setTimeout(type, 75);
-  } else {
-    typingText.style.borderRight = "none";  // remove the blinking line
+// TYPING TEXT FUNCTION
+document.addEventListener("DOMContentLoaded", () => {
+  const typingText = document.getElementById("typing-text");
+  const fullText = "Trusted Healthcare Since 1998";
+  let index = 0;
+
+  typingText.style.borderRight = "2px solid #fff"; // show blinking bar
+
+  function type() {
+    if (index < fullText.length) {
+      typingText.textContent += fullText.charAt(index);
+      index++;
+      setTimeout(type, 75);
+    } else {
+      typingText.style.borderRight = "none"; // remove blinking after done
+    }
   }
-}
-typingText.style.borderRight = "2px solid #fff";  // show blinking line
-type();
+
+  type();
+});
 
   // Simple floating particles (stars)
   const canvas = document.getElementById("particles");
